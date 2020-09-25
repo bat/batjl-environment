@@ -1,0 +1,12 @@
+
+#!/bin/bash
+
+set -ex
+
+cd "${REPO_DIR}"
+
+julia build_sysimage.jl
+
+julia -e "using IJulia; installkernel(\"Julia\", \"--project=${REPO_DIR}\", \"--sysimage=${REPO_DIR}/JuliaSysimage.so\")"
+
+julia --project="." --sysimage=JuliaSysimage.so make_examples.jl

@@ -1,0 +1,12 @@
+.DS_Store
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+.ipynb_checkpoints
+
+*.dll
+*.so
+*.so.*
+*.dylib
+
+*tutorial*
