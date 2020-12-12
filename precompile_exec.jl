@@ -1,6 +1,7 @@
 @info "Starting precompile exec."
 
 using BAT, ValueShapes, Distributions, LinearAlgebra, Plots
+import Cuba
 
 primary_dist = NamedTupleDist(a = Normal(), b = Weibull(), c = 5)
 f_secondary = x -> NamedTupleDist(y = Normal(x.a, x.b), z = MvNormal([1.3 0.5; 0.5 2.2]))
